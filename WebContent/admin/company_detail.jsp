@@ -12,7 +12,7 @@
     <script type="text/javascript">
 $(function(){
 	$("#modify").click(function(){
-		location.href="memberPw.mem"
+		location.href="../comp/companyModify.comp?compId=${dto.compId }"
 	});
 	$("#memDel").click(function(){
 		location.href="../comp/companyDel.comp?compId=${dto.compId }"

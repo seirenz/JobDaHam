@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import controller.admin.CompanyInfoAction;
+
 
 public class CompMemCtrl extends HttpServlet implements Servlet {
 	
@@ -40,6 +42,13 @@ public class CompMemCtrl extends HttpServlet implements Servlet {
 				response.sendRedirect("../main.main");
 			}
 			
+		}else if(command.equals("/comp/compInfo.comp")) {
+			CompanyInfoAction action = new CompanyInfoAction();
+			action.execute(request);
+			RequestDispatcher dispatcher = 
+					request.getRequestDispatcher("/admin/company_detail.jsp");
+			dispatcher.forward(request, response);
+			
 		}else if(command.equals("/comp/companyDel.comp")) {
 			
 			 request.setAttribute("compId", request.getParameter("compId"));
@@ -51,6 +60,13 @@ public class CompMemCtrl extends HttpServlet implements Servlet {
 			compDelAction action = new compDelAction();
 			action.execute(request);
 			response.sendRedirect("../main.main");
+		
+		}else if(command.equals("/comp/companyModify.comp")) {
+			CompanyInfoAction action = new CompanyInfoAction();
+			action.execute(request);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/compMem/company_modify.jsp");
+			dispatcher.forward(request, response);
+			
 		}
 	    
 	    

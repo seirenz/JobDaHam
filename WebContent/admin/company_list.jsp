@@ -55,7 +55,7 @@
                         <c:forEach var="dto" items="${companyList }" >
                         <tr align="center" valign="middle">
                             <td align="center">${dto.compNum }</td>
-	                        <td align="center"><a href ="compInfo.ad?compId=${dto.compId }"> ${dto.compId}</a> </td>
+	                        <td align="center"><a href ="../comp/compInfo.comp?compId=${dto.compId }"> ${dto.compId}</a> </td>
 	                        <td align="center">${dto.compPw }</td>
 		                    <td align="center">${dto.compName }</td>
 		                    <td align="center">${dto.cmanagerName }</td>
