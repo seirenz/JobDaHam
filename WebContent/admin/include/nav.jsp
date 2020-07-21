@@ -46,7 +46,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="companyList.ad">기업회원</a>
                                     <a class="nav-link" href="jobseekerList.ad">개인회원</a>
-                                    <a class="nav-link" href="headHunter.ad">헤드헌터</a>
+                                    <a class="nav-link" href="headHunterList.ad">헤드헌터</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

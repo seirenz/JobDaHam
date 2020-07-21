@@ -45,6 +45,12 @@ public class AdminCtrl extends HttpServlet implements Servlet {
 					request.getRequestDispatcher("/admin/company_detail.jsp");
 			dispatcher.forward(request, response);
 			
+		}else if(command.equals("/ad/headhunterList.ad")) {
+			HeadListAction action = new HeadListAction();
+			action.execute(request);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/company_list.jsp");
+			dispatcher.forward(request, response);
+			
 		}
 		
 		
