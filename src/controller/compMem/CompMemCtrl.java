@@ -41,10 +41,17 @@ public class CompMemCtrl extends HttpServlet implements Servlet {
 			}
 			
 		}else if(command.equals("/comp/companyDel.comp")) {
+			
+			 request.setAttribute("compId", request.getParameter("compId"));
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/compMem/company_delete.jsp");
 			dispatcher.forward(request, response);
+		
+			
+		}else if(command.equals("/comp/companyDelPro.comp")) {
+			compDelAction action = new compDelAction();
+			action.execute(request);
+			response.sendRedirect("../main.main");
 		}
-	    
 	    
 	    
 	    

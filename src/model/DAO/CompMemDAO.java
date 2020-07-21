@@ -158,7 +158,7 @@ public class CompMemDAO extends DataBaseInfo {
 			condition = " and comp_pw = ? ";
 		}
 		sql = "delete from companies where comp_id = ? " + condition;
-		System.out.println(sql);
+	
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, userId);
