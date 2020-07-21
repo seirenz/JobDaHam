@@ -22,7 +22,7 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
-                                                         기업회원
+                                                         헤드헌터 회원
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
