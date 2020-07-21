@@ -22,7 +22,8 @@ $(function(){
 </head>
 <body>
 <form id="frm" name="frm" action="companyDelPro.comp" >
-	<input type ="password" name ="compPw" />
+<input type ="hidden" name="compId" value="${compId }">
+    password:<input type ="password" name ="compPw" />
 	<input type="button" value="탈퇴하기" name="btn" id="btn"/>
 </form>
 </body>
