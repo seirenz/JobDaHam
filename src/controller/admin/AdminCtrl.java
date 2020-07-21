@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.member.MeberListAction;
+import controller.member.MemberInfoAction;
 
 public class AdminCtrl extends HttpServlet implements Servlet {
 	
@@ -35,6 +36,13 @@ public class AdminCtrl extends HttpServlet implements Servlet {
 		
 		}else if(command.equals("/ad/headHunterList.ad")) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/headhunter_list.jsp");
+			dispatcher.forward(request, response);
+			
+		}else if(command.equals("/ad/compInfo.ad")) {
+			MemberInfoAction action = new MemberInfoAction();
+			action.execute(request);
+			RequestDispatcher dispatcher = 
+					request.getRequestDispatcher("/member/memberInfo.jsp");
 			dispatcher.forward(request, response);
 			
 		}
