@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>JobDaHam</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>main</servlet-name>
+  <servlet-class>controller.loginout.LoginOutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>main</servlet-name>
+  <url-pattern>*.main</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>admin</servlet-name>
+  <servlet-class>controller.admin.AdminCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>admin</servlet-name>
+  <url-pattern>*.ad</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>mem</servlet-name>
+  <servlet-class>controller.member.MemberController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>mem</servlet-name>
+  <url-pattern>*.mem</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>comp</servlet-name>
+  <servlet-class>controller.compMem.CompMemCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>comp</servlet-name>
+  <url-pattern>*.comp</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>head</servlet-name>
+  <servlet-class>controller.headMem.HeadMemCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>head</servlet-name>
+  <url-pattern>*.head</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>jobs</servlet-name>
+  <servlet-class>controller.jobSeekerMem.JobsMemCtlr</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>jobs</servlet-name>
+  <url-pattern>*.jobs</url-pattern>
+  </servlet-mapping>
+</web-app>
