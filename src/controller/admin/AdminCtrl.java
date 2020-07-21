@@ -30,10 +30,6 @@ public class AdminCtrl extends HttpServlet implements Servlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/company_list.jsp");
 			dispatcher.forward(request, response);
 			
-		}else if(command.equals("/ad/jobseekerList.ad")) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/jobseeker_list.jsp");
-			dispatcher.forward(request, response);
-			
 		}else if(command.equals("/ad/compInfo.ad")) {
 			CompanyInfoAction action = new CompanyInfoAction();
 			action.execute(request);
@@ -47,6 +43,11 @@ public class AdminCtrl extends HttpServlet implements Servlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/headhunter_list.jsp");
 			dispatcher.forward(request, response);
 			
+		}else if(command.equals("/ad/headInfo.ad")) {
+			headInfoAction action = new headInfoAction();
+			action.execute(request);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/head_detail.jsp");
+			dispatcher.forward(request, response);
 		}
 		
 		
