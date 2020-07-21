@@ -1,42 +1,142 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" 
-	src="http://code.jquery.com/jquery-latest.js" ></script>
-<script type="text/javascript">
-$(function(){
-	$("#modify").click(function(){
-		location.href="memberInfoPw.mem?id=${dto.userId}"
-	});
-	$("#memDel").click(function(){
-		if(confirm("정말 진짜로 사실 리얼 탈퇴?")){
-			location.href="memberDel.mem?id=${dto.userId}"
-		}
-	});
-});
-</script>
-</head>
-<body>
+<html lang="en">
+    <head>
+       <%@ include file="/admin/include/head.jsp" %>
+    </head>
+    <body class="sb-nav-fixed">
+     <%@ include file="/admin/include/nav.jsp" %>
+       
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Tables</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Tables</li>
+                        </ol>
+                        
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                                         기업회원
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                 <table class="table table-bordered" id="dataTable" style="width:900px" cellspacing="0">
+                                       
+                                        <tfoot>
+                                    
+                                         <tr align="right"><td colspan="8"><a href="companyList.ad" >목록으로</a></td></tr>
 
-이름 : ${dto.userName }<br />
-아이디 : ${dto.userId }<br />
-이메일  : ${dto.userEmail }<br />
-생년월일  : ${dto.userBirth }<br />
-성별 : <c:if test="${dto.userGender == 'M' }">남자</c:if>
-	  <c:if test="${dto.userGender == 'F' }">여자</c:if> 
-<br />
-연락처 1 : ${dto.userPh1 }<br />
-연락처 2 : ${dto.userPh2 }<br />
-등록일 : ${dto.userRegist }<br />
-주소  : ${dto.userAddr }<br />
-<input type="button" name="modify" id ="modify" value="수   정" >
-<input type="button" value="취  소" 
-				onclick = "javascript:history.back();" />
-<input type="button" value="탈퇴" id ="memDel"/>
-</body>
+                                        </tfoot>
+                                     
+                                        <tbody>
+                                               
+                                             <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>등록번호 : </td>
+	                                        <td style="width:70%;" align=right >${dto.headNum } </td>
+                                            </tr>
+                                              <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>기업이름 : </td>
+	                                        <td style="width:70%;" align=right >${dto.headName } </td>
+                                            </tr>
+                                             
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>대표자: </td>
+	                                        <td style="width:70%;" align=right >${dto.headOwner } </td>
+                                            </tr>
+                                             
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>사업자등록번호: </td>
+	                                        <td style="width:70%;" align=right >${dto.bNum } </td>
+                                            </tr>
+                                             
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>기업유형: </td>
+	                                        <td style="width:70%;" align=right > ${dto.headType } </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>주소:  </td>
+	                                        <td style="width:70%;" align=right >${dto.headAddr} </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>인사담당자:  </td>
+	                                        <td style="width:70%;" align=right >${dto.hmanagerName } </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>아이디 :  </td>
+	                                        <td style="width:70%;" align=right >${dto.headId } </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>비번:  </td>
+	                                        <td style="width:70%;" align=right >${dto.headPw } </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>전화:  </td>
+	                                        <td style="width:70%;" align=right >${dto.headTel } </td>
+                                            </tr>
+                                             <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>이메일  :  </td>
+	                                        <td style="width:70%;" align=right >${dto.headEmail } </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>등록일시 : </td>
+	                                        <td style="width:70%;" align=right > ${dto.headRegist } </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>마케팅 동의 : </td>
+	                                        <td style="width:70%;" align=right > ${dto.marketing } </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>정보이용 동의:  </td>
+	                                        <td style="width:70%;" align=right >${dto.infoAgree } </td>
+                                            </tr>
+                                               <tr align="center" valign="middle">
+	                                        <td style="width:30%;" align=center>업무위탁 동의:  </td>
+	                                        <td style="width:70%;" align=right >${dto.workRequest } </td>
+                                            </tr>
+                                              <tr align="center" valign="middle">
+	                                       
+	                                        <td colspan="2" style="width:70%;" align=right >
+	                                            <input type="button" name="modify" id ="modify" value="수   정" >
+                                               <input type="button" name="pwModify" id ="pwModify" value="비밀번호" >
+                                               <input type="button" value="취  소" onclick = "javascript:history.back();" />
+                                               <input type="button" value="탈퇴" id ="memDel"/>
+                                             </td>
+                                            </tr>
+                                                
+                                               
+                                        </tbody>
+                                     </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../admin/js/scripts.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="../admin/assets/demo/datatables-demo.js"></script>
+    </body>
 </html>

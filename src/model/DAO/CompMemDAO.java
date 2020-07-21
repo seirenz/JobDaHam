@@ -149,6 +149,32 @@ public class CompMemDAO extends DataBaseInfo {
 		}
 		return result;
 	}
+
+	public void companyDelete(String userId, String userPw) {
+		int i = 0;
+		conn = getConnection();
+		String condition = "";
+		if(userPw !=null) {
+			condition = " and comp_pw = ? ";
+		}
+		sql = "delete from companies where comp_id = ? " + condition;
+		System.out.println(sql);
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userId);
+			
+			if(userPw !=null) {
+				pstmt.setString(2, userPw);
+			}
+			i = pstmt.executeUpdate(); 
+			System.out.println(i + "개가 삭제되었습니다.");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+	}
 	
 
 }

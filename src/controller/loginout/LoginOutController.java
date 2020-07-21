@@ -21,7 +21,7 @@ public class LoginOutController  extends HttpServlet
 		if(command.equals("/main.main")) {
 			CookieAction action = new CookieAction();
 			action.execute(request);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/main/Ymain.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/main/main.jsp");
 			dispatcher.forward(request, response);
 		}else if(command.equals("/login/loginPro.main")) {
 			LoginProAction action = new LoginProAction();

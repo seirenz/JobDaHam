@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import controller.compMem.compDelAction;
 import controller.member.MeberListAction;
 import controller.member.MemberInfoAction;
 
@@ -48,8 +49,8 @@ public class AdminCtrl extends HttpServlet implements Servlet {
 			action.execute(request);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/head_detail.jsp");
 			dispatcher.forward(request, response);
+			
 		}
-		
 		
 		
 	}

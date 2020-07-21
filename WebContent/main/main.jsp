@@ -31,6 +31,7 @@ $(function(){
 <!-- 로그인 안 된 경우 -->
 <form action="login/loginPro.main" name="frm" id="frm" method="post">
 <table border="1">
+
 <tr><td colspan="3">
 자동로그인<input type="checkbox" name="autologin" value="auto">
 &nbsp;&nbsp;&nbsp;&nbsp;

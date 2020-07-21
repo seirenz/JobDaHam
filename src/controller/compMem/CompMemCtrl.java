@@ -40,7 +40,14 @@ public class CompMemCtrl extends HttpServlet implements Servlet {
 				response.sendRedirect("../main.main");
 			}
 			
+		}else if(command.equals("/comp/companyDel.comp")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/compMem/company_delete.jsp");
+			dispatcher.forward(request, response);
 		}
+	    
+	    
+	    
+	    
 	}
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
