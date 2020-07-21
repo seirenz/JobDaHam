@@ -70,7 +70,7 @@
 	 <table border='1'  width = '600px' align = 'center' >
      <tr>
      <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="jobSeekerRegist.head"  >개인회원</a></td> 
-     <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="companyRegist.comp" >기업회원</a></td>
+     <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="../comp/companyRegist.comp" >기업회원</a></td>
      <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="headHunterRegist.head" >헤드헌터회원</a></td>
      </tr>
    </table>
