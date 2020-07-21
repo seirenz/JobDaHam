@@ -42,7 +42,7 @@ public class AdminCtrl extends HttpServlet implements Servlet {
 			MemberInfoAction action = new MemberInfoAction();
 			action.execute(request);
 			RequestDispatcher dispatcher = 
-					request.getRequestDispatcher("/member/memberInfo.jsp");
+					request.getRequestDispatcher("/admin/company_detail.jsp");
 			dispatcher.forward(request, response);
 			
 		}

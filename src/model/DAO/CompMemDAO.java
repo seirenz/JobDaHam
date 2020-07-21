@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.DTO.CompMemDTO;
-import model.DTO.MemberDTO;
 
 public class CompMemDAO extends DataBaseInfo {
 	
