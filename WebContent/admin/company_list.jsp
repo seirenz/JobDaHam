@@ -45,7 +45,7 @@
                                         </thead>
                                         <tfoot>
                                     
-                                         <tr align="right"><td colspan="8"><a href="comp/companyRegist.comp" >회원등록</a></td></tr>
+                                         <tr align="right"><td colspan="8"><a href="../comp/companyRegist.comp" >회원등록</a></td></tr>
 
                                         </tfoot>
                                      
