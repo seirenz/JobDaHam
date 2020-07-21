@@ -69,8 +69,8 @@
 	 <div style="margin:20px;">
 	 <table border='1'  width = '600px' align = 'center' >
      <tr>
-     <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="jobSeekerRegist.head"  >개인회원</a></td> 
-     <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="companyRegist.comp" >기업회원</a></td>
+     <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="../jobs/jobSeekerRegist.jobs"  >개인회원</a></td> 
+     <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="../comp/companyRegist.comp" >기업회원</a></td>
      <td style=" width:200px; height:50px;font-size: large;text-align: center;"><a href="headHunterRegist.head" >헤드헌터회원</a></td>
      </tr>
    </table>
@@ -128,7 +128,7 @@
   </tr>
   
   <tr>
-    <td ><input type='text' name='headId' id = 'headId' class = 'headId' maxlength ='20'  style=" width:343px; height:50px;font-size: large;text-align: left;"  placeholder="아이디*" required><button id="idChk" style="width:70px; height:50px;font-size: small;">중복확인</button></td>
+    <td ><input type='text' name='headId' id = 'headId' class = 'headId' maxlength ='20'  style=" width:273px; height:50px;font-size: large;text-align: left;"  placeholder="아이디*" required><button id="idChk" style="width:70px; height:50px;font-size: small;">중복확인</button></td>
      <td class= "pw"><span id=box><input type="password" name='headPw' id = 'compass' class = 'headPw' maxlength ='20'  placeholder="비밀번호*" style="width:190px; height:50px;" required></span>
       <span id=click><a href="javascript:ps()"><input type="button" value="보기"></a></span>
         </td>
