@@ -55,7 +55,8 @@ public class CompMemDAO extends DataBaseInfo {
 	}
 
 	  final String COLUMNS = "COMP_NUM,COMP_NAME,REPREGENT,B_NUM,COMP_TYPE,COMP_ADDR,CMANAGER_NAME,COMP_ID,COMP_PW,COMP_TEL,COMP_EMAIL,COMP_REGIST,JOIN_OK,MARKETING,INFO_AGREE,WORK_REQUEST";
-	public void compMemInsert(CompMemDTO dto) {
+	
+	  public void compMemInsert(CompMemDTO dto) {
 	
 		conn = getConnection();
 		sql = "insert into companies ( "+ COLUMNS +" )"
@@ -100,13 +101,13 @@ public class CompMemDAO extends DataBaseInfo {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			if(userId != null) { 
-				pstmt.setString(1, userId);
-				
+				pstmt.setString(1, userId);	
 			}
+			
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				CompMemDTO dto = new CompMemDTO();
-				dto.setCompNum(rs.getString("comp_num"));
+				dto.setCompNum(rs.getLong("comp_num"));
 				dto.setCompName(rs.getString("comp_name"));
 				dto.setRepregent(rs.getString("repregent"));
 				dto.setbNum(rs.getString("b_num"));

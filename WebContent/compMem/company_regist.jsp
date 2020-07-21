@@ -105,7 +105,7 @@
             <option >대기업</option>
             <option>대기업(계열사/자회사)</option>
             <option>중견기업(300명 이상)</option>
-            <option>중소기업(300명 이상</option>
+            <option>중소기업(300명 이상)</option>
             <option>벤처기업</option>
             <option>공공기관/공기업</option>
             <option>비영리단체/협회/교육기관</option>

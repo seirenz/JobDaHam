@@ -39,7 +39,7 @@ public class AdminCtrl extends HttpServlet implements Servlet {
 			dispatcher.forward(request, response);
 			
 		}else if(command.equals("/ad/compInfo.ad")) {
-			MemberInfoAction action = new MemberInfoAction();
+			CompanyInfoAction action = new CompanyInfoAction();
 			action.execute(request);
 			RequestDispatcher dispatcher = 
 					request.getRequestDispatcher("/admin/company_detail.jsp");

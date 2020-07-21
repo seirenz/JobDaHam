@@ -3,7 +3,7 @@ package model.DTO;
 import java.sql.Timestamp;
 
 public class CompMemDTO {
-	String compNum;
+	Long compNum;
 	String compName ;
 	String repregent ;
 	String bNum ;
@@ -28,10 +28,10 @@ public class CompMemDTO {
 		this.joinOk = joinOk;
 	}
 
-	public String getCompNum() {
+	public Long getCompNum() {
 		return compNum;
 	}
-	public void setCompNum(String compNum) {
+	public void setCompNum(Long compNum) {
 		this.compNum = compNum;
 	}
 	public String getCompName() {

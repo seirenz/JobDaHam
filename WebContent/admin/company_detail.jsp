@@ -23,21 +23,23 @@ $(function(){
 </script>
 </head>
 <body>
-기업번호 : ${companyList.compNum }<br />
-기업이름 : ${companyList.compName }<br />
-대표자: ${companyList.repregent }<br />
-사업자등록번호: ${companyList.bNum }<br />
-기업유형: ${companyList.compType }<br />
-주소: ${companyList.compAddr }<br />
-인사담당자: ${companyList.cmanagerName }<br />
-아이디 : ${companyList.userId }<br />
-비번: ${companyList.compPw }<br />
-전화: ${companyList.compTel }<br />
-이메일  : ${companyList.userEmail }<br />
-등록일 : ${companyList.compRegist }<br />
-마케팅 동의 : ${companyList.marketing }<br />
-정보이용 동의: ${companyList.infoAgree }<br />
-업무위탁 동의: ${companyList.workRequest }<br />
+등록번호 : ${dto.compNum }<br />
+기업이름 : ${dto.compName }<br />
+대표자: ${dto.repregent }<br />
+사업자등록번호: ${dto.bNum }<br />
+기업유형: ${dto.compType }<br />
+주소: ${dto.compAddr }<br /><br />
+
+인사담당자: ${dto.cmanagerName }<br />
+아이디 : ${dto.compId }<br />
+비번: ${dto.compPw }<br />
+전화: ${dto.compTel }<br />
+이메일  : ${dto.compEmail }<br />
+등록일시 : ${dto.compRegist }<br /><br />
+
+마케팅 동의 : ${dto.marketing }<br />
+정보이용 동의: ${dto.infoAgree }<br />
+업무위탁 동의: ${dto.workRequest }<br />
 <input type="button" name="modify" id ="modify" value="수   정" >
 <input type="button" name="pwModify" id ="pwModify" value="비밀번호" >
 <input type="button" value="취  소" 
