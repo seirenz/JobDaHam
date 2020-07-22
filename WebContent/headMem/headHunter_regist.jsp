@@ -146,7 +146,7 @@
 
 
 </table>
-<p>업무에 바로 활용가능한 정보와 이벤트 메일 수신에 동의합니다. <input type="checkbox" value="agree" name ="marketing"></p> 
+<p>업무에 바로 활용가능한 정보와 이벤트 메일 수신에 동의합니다. <input type="checkbox" value="동의" name ="marketing"></p> 
 
 <p>필수항목 및 개인정보 수집 및 이용 동의(선택),<br>업무위탁동의(선택)에 모두 동의합니다. <input type="checkbox" name="all" class="check-all" style="margin-left: 213px ;"> </p>
 <hr>
@@ -154,8 +154,8 @@
   <tbody>
   <tr><td id="agree"><span style="color: red;">[필수] 이용약관 동의</span></td><td><input type="checkbox"  class="ab" required></td></tr>
   <tr><td id="agree"><span style="color: red;">[필수] 개인정보 수집 및 이용 동의</td><td><input type="checkbox" class="ab" required></td></tr>
-  <tr><td id="agree"><span style="color: gray;">[선택] 개인정보 수집 및 이용 동의</span></td><td><input type="checkbox" name="infoAgree" class="ab" value = "agree"></td></tr>
-  <tr><td id="agree"><span style="color: gray;">[선택] 업무위탁</span></td><td><input type="checkbox" name="workRequest" class="ab" value ="agree"></td></tr>
+  <tr><td id="agree"><span style="color: gray;">[선택] 개인정보 수집 및 이용 동의</span></td><td><input type="checkbox" name="infoAgree" class="ab" value = "동의"></td></tr>
+  <tr><td id="agree"><span style="color: gray;">[선택] 업무위탁</span></td><td><input type="checkbox" name="workRequest" class="ab" value ="동의"></td></tr>
 </tbody>
 <tfoot>
   <tr>

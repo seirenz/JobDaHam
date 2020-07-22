@@ -1,5 +1,8 @@
 package model.DAO;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import model.DTO.HeadMemDTO;
 
 public class HeadMemDAO  extends DataBaseInfo  {
@@ -23,7 +26,8 @@ public class HeadMemDAO  extends DataBaseInfo  {
 		return id;
 	}
 	
-	 final String COLUMNS = "HEAD_NUM,HEAD_NAME,HEAD_OWNER,B_NUM,HEAD_TYPE,HEAD_ADDR,HMANAGER_NAME,HEAD_ID,HEAD_PW,HEAD_TEL,HEAD_EMAIL,HEAD_REGIST,JOIN_OK,MARKETING,INFO_AGREE,WORK_REQUEST";
+	final String COLUMNS = "HEAD_NUM,HEAD_NAME,HEAD_OWNER,B_NUM,HEAD_TYPE,HEAD_ADDR,HMANAGER_NAME,HEAD_ID,HEAD_PW,HEAD_TEL,HEAD_EMAIL,HEAD_REGIST,JOIN_OK,MARKETING,INFO_AGREE,WORK_REQUEST";
+	
 	public void headMemInsert(HeadMemDTO dto) {
 		conn = getConnection();
 		sql = "insert into headhunters ( "+ COLUMNS +" )"
@@ -77,6 +81,52 @@ public class HeadMemDAO  extends DataBaseInfo  {
 		finally {close();}
 		return result;
 		
+	}
+	
+	public List<HeadMemDTO> headMemSelect(String userId) {
+		List<HeadMemDTO> list = new ArrayList<HeadMemDTO>();
+	
+		String condition = "";
+		
+		if(userId != null) condition = " and head_id = ?";
+		conn = getConnection();
+		sql = "select " + COLUMNS + " from headhunters "
+			+ " where 1=1 " + condition 
+			+ " order by head_num desc";			
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			if(userId != null) { 
+				pstmt.setString(1, userId);
+				
+			}
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				HeadMemDTO dto = new HeadMemDTO();
+				dto.setHeadNum(rs.getString("head_num"));
+				dto.setHeadName(rs.getString("head_name"));
+				dto.setHeadOwner(rs.getString("head_owner"));
+				dto.setbNum(rs.getString("b_num"));
+				dto.setHeadType(rs.getString("head_type"));
+				dto.setHeadAddr(rs.getString("head_addr"));
+				dto.setHmanagerName(rs.getString("hmanager_name"));
+				dto.setHeadId(rs.getString("head_id"));
+				dto.setHeadPw(rs.getString("head_pw"));
+				dto.setHeadTel(rs.getString("head_tel"));
+				dto.setHeadEmail(rs.getString("head_email"));
+				dto.setHeadRegist(rs.getTimestamp("head_regist"));
+				dto.setJoinOk(rs.getString("join_ok"));
+				dto.setMarketing(rs.getString("marketing"));
+				dto.setInfoAgree(rs.getString("info_agree"));
+				dto.setWorkRequest(rs.getString("work_request"));
+				list.add(dto);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return list;
 	}
 
 		

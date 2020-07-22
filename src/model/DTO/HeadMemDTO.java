@@ -1,5 +1,7 @@
 package model.DTO;
 
+import java.sql.Timestamp;
+
 public class HeadMemDTO {
 	String headNum;
 	String headName ;
@@ -12,7 +14,7 @@ public class HeadMemDTO {
 	String headPw ;
 	String headTel;
 	String headEmail ;
-	String headRegist;
+	Timestamp headRegist;
 	String joinOk;
 	String marketing ;
 	String infoAgree ;
@@ -86,12 +88,13 @@ public class HeadMemDTO {
 	public void setHeadEmail(String headEmail) {
 		this.headEmail = headEmail;
 	}
-	public String getHeadRegist() {
+	public Timestamp getHeadRegist() {
 		return headRegist;
 	}
-	public void setHeadRegist(String headRegist) {
+	public void setHeadRegist(Timestamp headRegist) {
 		this.headRegist = headRegist;
 	}
+	
 	public String getJoinOk() {
 		return joinOk;
 	}

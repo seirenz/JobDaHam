@@ -40,6 +40,13 @@ public class HeadMemCtrl extends HttpServlet implements Servlet {
 				response.sendRedirect("../main.main");
 			}
 			
+		}else if (command.equals("/head/headDetail.head")) {
+			HeadDetailAction action = new HeadDetailAction();
+			action.execute(request);
+			String path = "/headMem/headDetail.jsp";
+			RequestDispatcher dispatcher = request.getRequestDispatcher(path);
+			dispatcher.forward(request, response);
+
 		}
 	}
 	@Override
