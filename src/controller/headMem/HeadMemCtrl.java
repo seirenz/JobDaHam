@@ -43,7 +43,7 @@ public class HeadMemCtrl extends HttpServlet implements Servlet {
 		}else if (command.equals("/head/headDetail.head")) {
 			HeadDetailAction action = new HeadDetailAction();
 			action.execute(request);
-			String path = "/headMem/headDetail.jsp";
+			String path = "/headMem/headhuntInfo.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 			dispatcher.forward(request, response);
 

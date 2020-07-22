@@ -22,19 +22,16 @@ $(function(){
 </script>
 </head>
 <body>
+이름 : ${list.headName }<br />
+아이디 : ${list.headId }<br />
+이메일  : ${list.headEmail }<br />
+연락처  : ${list.headTel }<br />
+등록일 : ${list.headRegist }<br />
+주소  : ${list.headAddr }<br />
 
-이름 : ${dto.userName }<br />
-아이디 : ${dto.userId }<br />
-이메일  : ${dto.userEmail }<br />
-생년월일  : ${dto.userBirth }<br />
-성별 : <c:if test="${dto.userGender == 'M' }">남자</c:if>
-	  <c:if test="${dto.userGender == 'F' }">여자</c:if> 
-<br />
-연락처 1 : ${dto.userPh1 }<br />
-연락처 2 : ${dto.userPh2 }<br />
-등록일 : ${dto.userRegist }<br />
-주소  : ${dto.userAddr }<br />
+
 <input type="button" name="modify" id ="modify" value="수   정" >
+<input type="button" name="pwModify" id ="pwModify" value="비밀번호" >
 <input type="button" value="취  소" 
 				onclick = "javascript:history.back();" />
 <input type="button" value="탈퇴" id ="memDel"/>
